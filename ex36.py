@@ -106,15 +106,23 @@ while lose == False and win == False:
 
 	# Right Radical (Add another state for right leaning 3rd party)
 	elif player_state == [0,1,3]:
-		prompt = "Hate crimes, deportation, ...  ()"
-		choices_responses = [["(Unfisnished", "", 0],
-		["Unfinished","", 1]]
+		prompt = "As Nazis march and The Donald endorses a child molester for senate you..."
+		choices_responses = [["continue to shit on libtards", "Over time your friends get tired of the memes, you lose your job. The lonlyness never goes away.", 0],
+		["Give up on politics. Focus on your own life","You're getting sick of it all, and you have enough problems at home. For now you give up the memes and stop spending so much time online", 1]]
+
+		chooser(prompt, choices_responses)
+
+		# Right Radical (Add another state for right leaning 3rd party)
+	elif player_state == [0,1,3,1]:
+		prompt = "If The Donald ever had a honeymoon period its definitely over now. Advisors are leaving in droves. He's betrayed half of his campaign promises. The economy is looking worse and worse. You're worried a war is coming. You... "
+		choices_responses = [["Give up on society", "Your only interest is self preservation as you see the worlds cherished institutions collapse around you. You invest in bitcoin and begin reaserching technology, skills and gear that will help you in this hostile future", 0],
+		["Feel ashamed that you had a hand in all this, begin to wonder if you can redeem yourself","You disown your past views, make apologies where neccesary and warn others who seem to be making the same mistakes", 1]]
 
 		chooser(prompt, choices_responses)
 
 
 	# Win
-	elif player_state[3] == 0 and player_state[0:3] != [0, 1, 3]:
+	elif (player_state[3] == 0 and player_state[0:3] != [0, 1, 3]) or player_state == [0,1,3,1,1]:
 		win = True
 
 
