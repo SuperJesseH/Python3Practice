@@ -115,4 +115,19 @@ class Player(object):
 	def move(self):
 		pass
 
-class Engine
+class Engine(object):
+
+	def get_current_Person(self):
+		pass
+	def get_current_Room(self):
+		pass
+
+	def display_choices(self):
+		pass
+	def current_bill_status(self):
+		pass
+
+	def next_Person(self):
+		pass
+	def next_room(self):
+		pass
